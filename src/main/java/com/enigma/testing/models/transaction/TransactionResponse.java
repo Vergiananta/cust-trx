@@ -7,6 +7,7 @@ import com.enigma.testing.models.customer.CustomerResponse;
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class TransactionResponse {
@@ -15,7 +16,7 @@ public class TransactionResponse {
 
     private CustomerResponse customer;
 
-    private Date buyDate;
+    private LocalDateTime buyDate;
 
     private Integer total;
 
@@ -35,11 +36,11 @@ public class TransactionResponse {
         this.customer = customer;
     }
 
-    public Date getBuyDate() {
+    public LocalDateTime getBuyDate() {
         return buyDate;
     }
 
-    public void setBuyDate(Date buyDate) {
+    public void setBuyDate(LocalDateTime buyDate) {
         this.buyDate = buyDate;
     }
 

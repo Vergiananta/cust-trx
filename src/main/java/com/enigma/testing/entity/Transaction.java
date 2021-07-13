@@ -1,6 +1,7 @@
 package com.enigma.testing.entity;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -16,11 +17,11 @@ public class Transaction extends AbstractEntity<Integer>{
     private Customer customer;
 
     @Column(name = "buy_date")
-    private Date buyDate;
+    private LocalDateTime buyDate;
 
     private Integer total;
 
-    public Transaction(Integer id, Customer customer, Date buyDate, Integer total) {
+    public Transaction(Integer id, Customer customer, LocalDateTime buyDate, Integer total) {
         this.id = id;
         this.customer = customer;
         this.buyDate = buyDate;
@@ -48,11 +49,11 @@ public class Transaction extends AbstractEntity<Integer>{
         this.customer = customer;
     }
 
-    public Date getBuyDate() {
+    public LocalDateTime getBuyDate() {
         return buyDate;
     }
 
-    public void setBuyDate(Date buyDate) {
+    public void setBuyDate(LocalDateTime buyDate) {
         this.buyDate = buyDate;
     }
 

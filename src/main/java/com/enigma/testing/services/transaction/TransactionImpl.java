@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
 public class TransactionImpl extends CommonServiceImpl<Transaction, Integer> implements TransactionDao{
 
     @Autowired
-    private CustomerDao customerDao;
-
-    @Autowired
     public TransactionImpl(TransactionRepository repository) {
         super(repository);
     }

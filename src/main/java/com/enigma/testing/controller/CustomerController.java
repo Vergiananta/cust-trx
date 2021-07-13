@@ -28,7 +28,6 @@ public class CustomerController {
     public ResponseMessage<CustomerResponse> add(@RequestBody CustomerRequest customer){
         Customer entity = modelMapper.map(customer, Customer.class);
         entity = service.save(entity);
-        System.out.println("test"+entity.toString());
         CustomerResponse data = modelMapper.map(entity, CustomerResponse.class);
         return ResponseMessage.success(data);
     }
